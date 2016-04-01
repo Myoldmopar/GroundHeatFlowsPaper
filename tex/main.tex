@@ -1,11 +1,13 @@
 \documentclass{article}
 
 \usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
 
 \title{A Detailed Characterization of Heat Flows in the Ground Under a Building with Optimization for Simulation} 
 \author{
   Mitchell, Matt\\
-  \texttt{matt.mitchell@something.com}
+  \texttt{matt.mitchell@okstate.edu}
   \and
   Lee, Edwin\\
   \texttt{edwin.lee@nrel.gov}
@@ -20,38 +22,58 @@
  
  \section*{Introduction}
      Provide the problem statement
+
   \subsection*{Background}
-     A more detailed introduction with background and literature review.  Interesting citations: Kiva, Slab/Basement, HVAC\&R paper \citep{Lee2013}, etc.
+   A more detailed introduction with background and literature review.  Interesting citations: Kiva, Slab/Basement, HVAC\&R paper \citep{Lee2013}, etc.  By the way, Figure~\ref{fig:google} shows a picture of the Google Logo.
+   \begin{figure}
+    \centering
+    \label{fig:google}
+    \includegraphics[width=0.7\textwidth]{images/googlelogo.png}
+    \caption{Google Logo}
+   \end{figure}
+
   \subsection*{Scope and Purpose}
-     What are the actual goals of this paper?
-  \subsection*{Mathematical reasoning for the approach used here...how does taking a temperature slice in the domain help?}
+   What are the actual goals of this paper?
+
+  \subsection*{Mathematical Approach}
+   What is the mathematical reasoning for the approach used here...how does taking a temperature slice in the domain help?  By the way, Equation~\eqref{eq:einstein} is a classic equation.
+   \begin{equation}
+    \label{eq:einstein}
+    E = m c^2
+   \end{equation}
  
  \section*{Preliminary Model Evaluation} 
   Describe the model, focus on three phases: initial implementation (cite the old paper), experimental and other validation to build confidence, and then changes since then.  Description of BESTEST results here.
  
  \section*{Experiment A: Characterizing Heat Flows}
+
   \subsection*{Ground/Building configuration and description}
    What are we modeling?
+
   \subsection*{Boundary conditions and ground properties}
    Yep. 
+
   \subsection*{Specific slices}
    Describle the slices we'll be taking through the domain 
+
   \subsection*{Results}
    How did it turn out?  Lots of pictures.
 
  \section*{Experiment B: Optimizing for RunTime}
+
   \subsection*{Tolerances and Approach}
    How will we proceed forward, ensuring accuracy is maintained while reducing runtime
+
   \subsection*{Information from Experiment A}
    Wrap the results of Experiment A into the expected target regions of the domain
+
   \subsection*{Results}
    How did we do in each test?
 
  \section*{Conclusions}
   We did awesome.  Here are some additional things that would be cool
 
- \section*{References}
-  \bibliographystyle{plainnat}
-  \bibliography{bibfile} 
+ \bibliographystyle{plainnat}
+ \bibliography{bibfile} 
 
 \end{document}
