@@ -11,6 +11,9 @@
 # Build folder
 _build
 
+# VIM swap file
+*.swp
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
