@@ -1,14 +1,12 @@
 before_install:
-- sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended gnuplot
 script:
-- mkdir _build
-- pdflatex -output-directory _build tex/main.tex
-- pdflatex -output-directory _build tex/main.tex
+- make
 deploy:
   provider: releases
   api_key:
     secure: l5UG4d6Zzkav6tY49mcikN7KPMOIDwwpJofh/+PMIM0UynIcHnBSkVJk99+U6AItX8axhpG4SZ4n2t3NBAxmOpGTcL8zZ91ABbUn5BJlyKGgITIRGaOgsIoAvXAeXFe6JwU1i3HF8G7mp/yuSRQHmslyf8BT0QLo8A32xmpgkLZeuxmpC18MP4P2WNLN57Nz1Y2edbKOiIVT04oqF/PkD2mIUIgsMxfE/J17v9F5fcMr8HS8AbtF5uYIfLcGhidh80Wb4Ai2QinY6nEBX5gLQMFjPh9Rr0vq0vFvaOpTUrzQbO6xx7IPtw3v+0Xc3NDOzTxYgBfHN/ICb6PqiPjBANfWhwmyx2ajJGVbjf5r1VnwcBSE8Wlp1qe6kMydKCs1f6bltittArj1+WqG89sNl1c7sZ1sAafLQD90Hlc1131d21Y5X6B7ZNeEGt9wN5Hk/illmmFs52bZuvloPCIIblJMEQD+M/jEX13i011lpfefKOAsnOii89scfMXx9pgCM3qpyLS+1aMVwtHDTdn/yZ1njw/Cce68dVMzAsLOO8QDvHeVrOrEBrIxp1U0axaLr8Sa735A1aVj6ByKgmv0eFyG0Ma2eWfUl/fgphLBiCmJxSAWvTI0mIWzHNY9iNLlPGamoOlx02Hdr3rd/qQ/I17kswHe5XIl+ki33lWIpjM=
-  file: _build/main.pdf
+  file: tex/main.pdf
   skip_cleanup: true
   on:
     tags: true
