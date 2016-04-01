@@ -2,7 +2,6 @@ filename=main
 args="-interaction=nonstopmode "
 
 pdf:
-	$(MAKE) -C ../data
 	pdflatex ${args} ${filename}
 	bibtex ${filename}||true
 	pdflatex ${args} ${filename}
